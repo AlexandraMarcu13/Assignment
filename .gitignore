@@ -97,4 +97,5 @@ coverage/
 *.coverage.xml
 
 # Benchmark results
-BenchmarkDotNet.Artifacts/
+BenchmarkDotNet.Artifacts/".angular/" 
+".angular/cache/" 
