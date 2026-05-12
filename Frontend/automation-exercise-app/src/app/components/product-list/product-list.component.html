@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h2>Our Products</h2>
+  
+  <div *ngIf="loading" class="text-center">
+    <p>Loading products...</p>
+  </div>
+  
+  <div class="row" *ngIf="!loading">
+    <div class="col-md-3 mb-4" *ngFor="let product of products">
+      <div class="card">
+        <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.description | slice:0:100}}</p>
+          <p class="card-text"><strong>Price: ${{product.price}}</strong></p>
+          <p class="card-text" [class.text-danger]="getRemainingStock(product) < 10">
+            Stock: {{product.stock}}
+            <span *ngIf="getQuantityInCart(product.id) > 0" class="text-info">
+              ({{getQuantityInCart(product.id)}} in cart)
+            </span>
+          </p>
+          <button class="btn btn-primary" 
+                  (click)="addToCart(product)"
+                  [disabled]="product.stock === 0 || getRemainingStock(product) === 0">
+            {{product.stock === 0 ? 'Out of Stock' : 'Add to Cart'}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

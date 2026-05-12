@@ -1,0 +1,21 @@
+.quantity-input {
+  width: 80px;
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.table-total {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.btn-sm {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.text-end {
+  text-align: right;
+  margin-top: 20px;
+}
