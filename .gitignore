@@ -99,3 +99,6 @@ coverage/
 # Benchmark results
 BenchmarkDotNet.Artifacts/".angular/" 
 ".angular/cache/" 
+".angular/" 
+".angular/cache/" 
+"node_modules/" 
