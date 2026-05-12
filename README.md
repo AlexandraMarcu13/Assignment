@@ -191,8 +191,6 @@ ng serve
 ### Run All Tests (Backend + Frontend)
 
 
-### Run All Tests (Backend + Frontend)
-
 Windows PowerShell (navigate to project root first):
 
 cd C:\path\to\your\project
